@@ -8,7 +8,7 @@ namespace Cloudly.ViewModel
 {
     public class RandomMovieViewModel
     {
-        public List<Customers> Customer;
+        public List<Customer> Customer;
 
         public Movies Movie;
     }

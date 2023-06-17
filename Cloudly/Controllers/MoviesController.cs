@@ -10,15 +10,31 @@ namespace Cloudly.Controllers
 {
     public class MoviesController : Controller
     {
+        public ViewResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+
+        private IEnumerable<Movies> GetMovies()
+        {
+            return new List<Movies>
+            {
+                new Movies { Id = 1, Name = "Adipurush" },
+                new Movies { Id = 2, Name = "Kung fu Panda" }
+            };
+        }
+
         // GET: Movies
         public ActionResult Random()
         {
             var movies = new Movies() { Name = "Adipurush !" };
 
-            var customers = new List<Customers>
+            var customers = new List<Customer>
             {
-                new Customers { Id=1, Name="Customer 1"},
-                new Customers { Id=2, Name="Customer 2"}
+                new Customer { Id=1, Name="Customer 1"},
+                new Customer { Id=2, Name="Customer 2"}
             };
 
             var viewModel = new RandomMovieViewModel
