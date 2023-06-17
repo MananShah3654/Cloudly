@@ -29,6 +29,7 @@ namespace Cloudly.Controllers
         public ActionResult edit(int movieId)
         {
             return Content("id = " + movieId);
+
         }
 
         public ActionResult Index(int? pageIndex, string sortBy)
